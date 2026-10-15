@@ -1,0 +1,17 @@
+replicaCount: 1
+image:
+  repository: assignment7-demo
+  tag: "1.0"
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+app:
+  message: "Hello from Helm release version 1!"
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 128Mi
